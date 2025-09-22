@@ -1,0 +1,55 @@
+1. What is normalization?
+Normalization is the process of organizing data in a database to minimize redundancy and improve data integrity.
+
+Example: Splitting customer details and order details into separate tables to avoid repetition.
+
+Forms: 1NF, 2NF, 3NF, BCNF.
+--------
+2. Explain primary vs foreign key.
+
+Primary Key: A unique identifier for each record in a table (e.g., StudentID in a Students table).
+
+Foreign Key: A field in one table that refers to the primary key of another table, used to establish relationships.
+--------
+3. What are constraints?
+Rules applied to columns in a table to maintain integrity and accuracy of data.
+
+Types: NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK, DEFAULT.
+---------
+4. What is a surrogate key?
+A system-generated key (often an auto-increment integer) used as a primary key instead of using natural keys like email or SSN.
+
+Example: CustomerID INT AUTO_INCREMENT.
+---------
+5. How do you avoid data redundancy?
+
+Apply normalization (splitting data into smaller, related tables).
+
+Use primary–foreign key relationships.
+
+Apply constraints to ensure consistency.
+---------
+6. What is an ER diagram?
+An Entity-Relationship diagram is a visual model that shows entities (tables), their attributes (columns), and the relationships (1:1, 1:N, M:N) between them.
+---------
+7. What are the types of relationships in DBMS?
+
+One-to-One (1:1) → Each record in Table A relates to only one in Table B.
+
+One-to-Many (1:N) → A single record in Table A can relate to many in Table B.
+
+Many-to-Many (M:N) → Records in both tables can have multiple associations (implemented via a junction table).
+---------
+8. Explain the purpose of AUTO_INCREMENT.
+AUTO_INCREMENT automatically generates a unique number for a column (usually primary key) whenever a new record is inserted.
+---------
+9. What is the default storage engine in MySQL?
+
+InnoDB (since MySQL 5.5).
+
+Supports ACID transactions, row-level locking, and foreign keys.
+---------
+10. What is a composite key?
+A primary key made up of two or more columns. Used when no single column can uniquely identify a row.
+
+Example: (StudentID, CourseID) in an Enrollments table.-------
